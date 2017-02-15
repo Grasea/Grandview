@@ -58,12 +58,6 @@ public class BasicWebViewClient extends WebViewClient {
         return ((AdvanceWebView) view).shouldOverrideUrlLoading(url);
     }
 
-    @Override
-    public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-        //handler.cancel(); //默认的处理方式，WebView变成空白页
-        handler.proceed();
-        // handleMessage(Message msg); //其他处理
-    }
 
     @Override
     public void onLoadResource(WebView view, String url) {
